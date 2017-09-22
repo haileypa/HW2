@@ -1,0 +1,15 @@
+<html> 
+	<body>
+		{% if python_obj['results'] %}
+			{% for thing in python_obj['results'] %}
+				<h1> Title: {{thing['trackName']}}</h1>
+				<h2> Artist: {{thing['artistName']}}</h2>
+				<h2> Collection: {{thing['collectionName']}}</h2>
+				<h2> Release Date: {{thing['releaseDate']}}</h2>
+				<br>
+			{% endfor%}
+		{% else %}
+			<h1> There are no songs with this title. </h1>
+		{% endif %}
+	</body>
+</html>
